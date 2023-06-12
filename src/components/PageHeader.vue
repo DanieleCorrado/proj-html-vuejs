@@ -19,6 +19,28 @@ export default {
         {
           mail: 'hello@exemple.com'
         }
+        ],
+        menuOption: [
+          {
+            optionName: 'HOME',
+            optionLink: '#'
+          },
+          {
+            optionName: 'SERVICES',
+            optionLink: '#'
+          },
+          {
+            optionName: 'SKILLS',
+            optionLink: '#'
+          },
+          {
+            optionName: 'PARTERS',
+            optionLink: '#'
+          },
+          {
+            optionName: 'BLOG',
+            optionLink: '#'
+          },
         ]
       }
     }
@@ -28,6 +50,9 @@ export default {
 <template>
 
 <header>
+
+  <!-- Sezione inforzazioni azienda -->
+
   <section id="info">
 
     <!-- infomrazioni orario di lavoro -->
@@ -86,8 +111,41 @@ export default {
 
   </section>
 
+  <!-- Sezione call to action-->
+
   <section id="jumbotrone">
-    prova
+
+    <div id="top-jumbo">
+
+      <div id="logo">
+        <img src="../assets/img/image.png" alt="Logo">
+      </div>
+      
+      <div id="menu">
+
+        <nav id="navigation">
+          <ul>
+            <li v-for="option in menuOption">
+              <a :href="option.optionLink"> {{ option.optionName }}</a>
+            </li>
+          </ul>
+
+        </nav>
+
+        <button type="button"> GET IN TOUCH</button>
+      </div>
+
+    </div>
+
+    <div id="call-to-action">
+
+      <h1>Logistics that goes further.</h1>
+      <p>For 20 years working with the most innovative in the field of transport. </p>
+      <button type="button" id="get-in-touch">GET IN TOUCH</button>
+      <button type="button" id="read-more">READ MORE</button>
+
+    </div>
+
   </section>
 
 </header>
@@ -151,9 +209,77 @@ header {
   #jumbotrone {
     height: 90%;
     background-image: url(../assets/img/jumbo.jpg);
+    filter:brightness(.85);
     overflow: hidden;
     background-size: cover;
-    background-position: top;
+    background-position: left;
+    color: white;
+    position: relative;
+
+    // Regole generali pulsanti
+
+    button {
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: $buttombackground;
+        border: 1px solid $buttombackground;
+        color: white;
+        cursor: pointer;
+    }
+
+    // Regole parte superiore del jumbotrone
+
+    #top-jumbo {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #menu {
+          #navigation {
+          display: inline-block;
+          padding: 0 10px;
+          ul {
+            display: flex;
+            list-style: none;
+
+            li {
+              a {
+                padding: 10px;
+              }
+            }
+          }
+        }
+        }
+    }
+    // Regole call to action del jumbotrone
+
+    #call-to-action {
+      width: 20%;
+      position: absolute;
+      top: 100px;
+      left: 600px;
+
+      h1 {
+        margin-bottom: 20px;
+        font-size: 50px;
+      }
+
+      p {
+        margin-bottom: 30px;
+        font-size: 18px;
+      }
+
+      #get-in-touch {
+        margin-right: 30px;
+      }
+
+      #read-more {
+        background-color: transparent;
+      }
+    }
   }
 }
 
