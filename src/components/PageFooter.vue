@@ -4,9 +4,6 @@ import about from '../dataset/about.json';
 import transport from '../dataset/transport.json';
 import support from '../dataset/support.json';
 
-
-
-
 export default {
     name: "PageFooter",
     data() {
@@ -111,6 +108,19 @@ export default {
 
   </section>
 
+  <!-- Sezione copyrights -->
+  
+  <section id="copyrights">
+    <div>
+      <span>Enjoy the low price. We are tracking any intention of piracy</span>
+    </div>
+
+    <div>
+      <font-awesome-icon icon="fa-regular fa-copyright" />
+      <span>2020 NEXGEN is Proudly Powered by <a href="#">Codings</a>.</span>
+    </div>
+  </section>
+
 </footer>
 
 </template>
@@ -199,6 +209,22 @@ footer {
         margin-top: 20px;
         background-color: transparent;
       }
+    }
+  }
+
+  #copyrights {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0 10px;
+    background-color: rgb(33, 51, 62);
+    color: white;
+
+    span {
+      margin-left: 10px;
+    }
+
+    a {
+      color: $primary;
     }
   }
 }

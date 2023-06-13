@@ -11,6 +11,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-library.add(faClock, faPhone, faEnvelope, faFacebookF, faTwitter, faLinkedinIn, faLocationDot, faChevronRight)
+import { faCopyright } from '@fortawesome/free-regular-svg-icons'
+library.add(faClock, faPhone, faEnvelope, faFacebookF, faTwitter, faLinkedinIn, faLocationDot, faChevronRight, faCopyright)
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
