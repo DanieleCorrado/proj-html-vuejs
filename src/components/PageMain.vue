@@ -144,6 +144,36 @@ export default {
 
   </section>
 
+  <!-- Sezione applicativi -->
+
+  <section id="application">
+
+    <div class="app-logo">
+      <img src="../assets/img/logo-5.png" alt="Logo LESS">
+    </div>
+
+    <div class="app-logo">
+      <img src="../assets/img/logo-1.png" alt="Logo Woocommerce">
+    </div>
+
+    <div class="app-logo">
+      <img src="../assets/img/logo-2.png" alt="Logo Woocommerce">
+    </div>
+
+    <div class="app-logo">
+      <img src="../assets/img/logo-3.png" alt="Logo Woocommerce">
+    </div>
+
+    <div class="app-logo">
+      <img src="../assets/img/logo-4.png" alt="Logo Woocommerce">
+    </div>
+
+    <div class="app-logo">
+      <img src="../assets/img/logo-5.png" alt="Logo LESS">
+    </div>
+  </section>
+
+
 </main>
 
 </template>
@@ -153,11 +183,10 @@ export default {
 @use '../styles/partials/variables.scss' as *;
 
 main {
-
+  background-color: $mainbackground;
   // Regole sezione logistica
   
   #logistics {
-    background-color: $mainbackground;
 
     // Regole sezione descrizione del business
 
@@ -308,6 +337,23 @@ main {
           }
         }
 
+    }
+  }
+
+  // Regole sezione applicativi
+
+  #application {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+
+    // Regole logo
+    .app-logo {
+      padding: 60px 0;
+      width: calc(100% / 6);
+      text-align: center;
     }
   }
 
