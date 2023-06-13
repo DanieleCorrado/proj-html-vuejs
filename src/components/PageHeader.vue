@@ -2,155 +2,154 @@
 import contacts from '../dataset/contacts.json';
 
 export default {
-    name: "PageHeader",
-    data() {
-      return {
-        workHours: {
-          firstDay : 'Mon',
-          lastDay : 'Sat',
-          openingtime : '09:00',
-          closingTime : '18:00'
+  name: "PageHeader",
+  data() {
+    return {
+      workHours: {
+        firstDay: 'Mon',
+        lastDay: 'Sat',
+        openingtime: '09:00',
+        closingTime: '18:00'
+      },
+      contact: contacts,
+      menuOption: [
+        {
+          optionName: 'HOME',
+          optionLink: '#'
         },
-        contact: contacts,
-        menuOption: [
-          {
-            optionName: 'HOME',
-            optionLink: '#'
-          },
-          {
-            optionName: 'SERVICES',
-            optionLink: '#'
-          },
-          {
-            optionName: 'SKILLS',
-            optionLink: '#'
-          },
-          {
-            optionName: 'PARTERS',
-            optionLink: '#'
-          },
-          {
-            optionName: 'BLOG',
-            optionLink: '#'
-          },
-        ]
-      }
+        {
+          optionName: 'SERVICES',
+          optionLink: '#'
+        },
+        {
+          optionName: 'SKILLS',
+          optionLink: '#'
+        },
+        {
+          optionName: 'PARTERS',
+          optionLink: '#'
+        },
+        {
+          optionName: 'BLOG',
+          optionLink: '#'
+        },
+      ]
     }
+  }
 }
 </script>
 
 <template>
+  <header>
 
-<header>
+    <!-- Sezione inforzazioni azienda -->
 
-  <!-- Sezione inforzazioni azienda -->
+    <section id="info">
 
-  <section id="info">
+      <!-- infomrazioni orario di lavoro -->
 
-    <!-- infomrazioni orario di lavoro -->
+      <div id="work-time">
+        <font-awesome-icon icon="fa-solid fa-clock" />
+        <span>Open Hours: {{ workHours.firstDay }} - {{ workHours.lastDay }} - {{ workHours.openingtime }} -
+          {{ workHours.closingTime }}</span>
+      </div>
 
-    <div id="work-time">
-      <font-awesome-icon icon="fa-solid fa-clock" />
-      <span>Open Hours: {{workHours.firstDay}} - {{workHours.lastDay}} - {{workHours.openingtime}} - {{workHours.closingTime}}</span>
-    </div>
+      <!-- Informazioni contatti aziendali -->
 
-    <!-- Informazioni contatti aziendali -->
+      <div id="contacts">
 
-    <div id="contacts">
+        <div id="mail-phone">
 
-     <div id="mail-phone">
-      
-        <!-- Telefono aziendale -->
+          <!-- Telefono aziendale -->
 
-       <font-awesome-icon icon="fa-solid fa-phone" />
-        <span id="phone"> +{{ contact[0].stateCode }} 
-          <span v-if="contact[0].areaCode">({{ contact[0].areaCode }})</span>
-          {{ contact[0].phoneNumber }}
-        </span>
+          <font-awesome-icon icon="fa-solid fa-phone" />
+          <span id="phone"> +{{ contact[0].stateCode }}
+            <span v-if="contact[0].areaCode">({{ contact[0].areaCode }})</span>
+            {{ contact[0].phoneNumber }}
+          </span>
 
-        <!-- Mail aziendale -->
+          <!-- Mail aziendale -->
 
-        <font-awesome-icon icon="fa-solid fa-envelope" />
-        <span id="mail"> {{contact[1].mail}} </span>
+          <font-awesome-icon icon="fa-solid fa-envelope" />
+          <span id="mail"> {{ contact[1].mail }} </span>
+
+        </div>
+
+        <!-- Informazioni social aziendali -->
+
+        <div id="socials">
+
+          <!-- Facebook -->
+
+          <a href="#">
+            <font-awesome-icon icon="fa-brands fa-facebook-f" />
+          </a>
+
+          <!-- Twitter -->
+
+          <a href="#">
+            <font-awesome-icon icon="fa-brands fa-twitter" />
+          </a>
+
+          <!-- Linkedin -->
+
+          <a href="#">
+            <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+          </a>
+
+        </div>
 
       </div>
 
-      <!-- Informazioni social aziendali -->
+    </section>
 
-      <div id="socials">
+    <!-- Sezione call to action-->
 
-        <!-- Facebook -->
+    <section id="jumbotrone">
 
-        <a href="#">
-          <font-awesome-icon icon="fa-brands fa-facebook-f" />
-        </a>
+      <div id="top-jumbo">
 
-        <!-- Twitter -->
+        <div id="name">
+          <div id="background">
+            <h2>NEX</h2>
 
-        <a href="#">
-          <font-awesome-icon icon="fa-brands fa-twitter" />
-        </a>
+          </div>
+          <H2>GEN</H2>
+        </div>
 
-        <!-- Linkedin -->
 
-        <a href="#">
-          <font-awesome-icon icon="fa-brands fa-linkedin-in" />
-        </a>
+        <div id="menu">
+
+          <nav id="navigation">
+            <ul>
+              <li v-for="option in menuOption">
+                <a :href="option.optionLink"> {{ option.optionName }}</a>
+              </li>
+            </ul>
+
+          </nav>
+
+          <button type="button"> GET IN TOUCH</button>
+
+        </div>
 
       </div>
 
-    </div>
+      <div id="call-to-action">
 
-  </section>
+        <h1>Logistics that goes further.</h1>
+        <p>For 20 years working with the most innovative in the field of transport. </p>
+        <button type="button" id="get-in-touch">GET IN TOUCH</button>
+        <button type="button" id="read-more">READ MORE</button>
 
-  <!-- Sezione call to action-->
-
-  <section id="jumbotrone">
-
-    <div id="top-jumbo">
-
-      <div id="name">
-        <div id="background">
-        <h2>NEX</h2>
-      </div>
-        <H2>GEN</H2>
-      </div>
-      
-      
-      <div id="menu">
-
-        <nav id="navigation">
-          <ul>
-            <li v-for="option in menuOption">
-              <a :href="option.optionLink"> {{ option.optionName }}</a>
-            </li>
-          </ul>
-
-        </nav>
-
-        <button type="button"> GET IN TOUCH</button>
-        
       </div>
 
-    </div>
+    </section>
 
-    <div id="call-to-action">
-
-      <h1>Logistics that goes further.</h1>
-      <p>For 20 years working with the most innovative in the field of transport. </p>
-      <button type="button" id="get-in-touch">GET IN TOUCH</button>
-      <button type="button" id="read-more">READ MORE</button>
-
-    </div>
-
-  </section>
-
-</header>
-
+  </header>
 </template>
 
 <style lang="scss" scoped>
-
 @use '../styles/partials/variables.scss' as *;
 
 // Regole header
@@ -160,10 +159,10 @@ header {
 
   // Regole info
 
-  #info{
+  #info {
     display: flex;
     padding: 15px 0;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     background-color: rgb(33, 51, 62);
     color: white;
     height: 10%;
@@ -206,7 +205,7 @@ header {
   #jumbotrone {
     height: 90%;
     background-image: url(../assets/img/jumbo.jpg);
-    filter:brightness(.85);
+    filter: brightness(.85);
     overflow: hidden;
     background-size: cover;
     background-position: left;
@@ -216,36 +215,36 @@ header {
     // Regole parte superiore del jumbotrone
 
     #top-jumbo {
-        width: 60%;
-        margin: 0 auto;
-        margin-top: 20px;
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      #name {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-        #name {
-          display: flex;
+        #background {
+          display: inline-block;
+          background-color: rgba(4, 131, 131, 0.4);
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          padding-left: 20px;
 
-          #background {
-            display: inline-block;
-            background-color: rgba(4, 131, 131, 0.4);
-            border-top-left-radius: 5px;
-            border-bottom-left-radius: 5px;
-            padding-left: 20px;
-
-            h2 {
-              color: $primary;
-            }
+          h2 {
+            color: $primary;
           }
         }
+      }
 
-        #menu {
+      #menu {
 
-          #navigation {
+        #navigation {
 
           display: inline-block;
           padding: 0 10px;
-          
+
           ul {
             display: flex;
             list-style: none;
@@ -256,9 +255,10 @@ header {
               }
             }
           }
-          }
         }
+      }
     }
+
     // Regole call to action del jumbotrone
 
     #call-to-action {
@@ -287,5 +287,4 @@ header {
     }
   }
 }
-
 </style>

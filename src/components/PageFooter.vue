@@ -5,128 +5,125 @@ import transport from '../dataset/transport.json';
 import support from '../dataset/support.json';
 
 export default {
-    name: "PageFooter",
-    data() {
-      return {
-        contact: contacts,
-        about: about,
-        transport: transport,
-        support: support
-      }
+  name: "PageFooter",
+  data() {
+    return {
+      contact: contacts,
+      about: about,
+      transport: transport,
+      support: support
     }
+  }
 }
 </script>
 
 <template>
+  <footer>
 
-<footer>
-  
 
-  <section id="information">
+    <section id="information">
 
-    <!-- Sezione contatti azienda -->
+      <!-- Sezione contatti azienda -->
 
-    <div id="contact">
+      <div id="contact">
 
-      <div id="background">
-        <h2>NEX</h2>
+        <div id="background">
+          <h2>NEX</h2>
+        </div>
+
+        <H2>GEN</H2>
+
+        <p>
+          A funcional HTML template for corporate and business.
+        </p>
+
+        <ul>
+
+          <li>
+            <font-awesome-icon icon="fa-solid fa-phone" />
+            <span id="phone">
+              +{{ contact[0].stateCode }}
+              <span v-if="contact[0].areaCode">({{ contact[0].areaCode }})</span>
+              {{ contact[0].phoneNumber }}
+            </span>
+          </li>
+
+          <li>
+            <font-awesome-icon icon="fa-solid fa-envelope" />
+            <span id="mail"> {{ contact[1].mail }} </span>
+          </li>
+
+          <li>
+            <font-awesome-icon icon="fa-solid fa-location-dot" />
+            <span>{{ contact[2].streetName }}, {{ contact[2].houseNumber }}</span>
+          </li>
+
+        </ul>
+
+        <button type="button"> GET IN TOUCH</button>
+
       </div>
 
-      <H2>GEN</H2>
+      <!-- Sezione informazioni azienda -->
 
-      <p>
-        A funcional HTML template for corporate and business.
-      </p>
+      <div id="about">
 
-      <ul>
+        <h2>About</h2>
 
-        <li>
-          <font-awesome-icon icon="fa-solid fa-phone" />
-          <span id="phone"> 
-            +{{ contact[0].stateCode }} 
-            <span v-if="contact[0].areaCode">({{ contact[0].areaCode }})</span>
-            {{ contact[0].phoneNumber }}
-          </span>
-        </li>
+        <ul>
+          <li v-for="option in about">
+            <font-awesome-icon icon="fa-solid fa-chevron-right" />
+            <a :href="option.linkSection">{{ option.nameSection }}</a>
+          </li>
+        </ul>
 
-        <li>
-          <font-awesome-icon icon="fa-solid fa-envelope" />
-          <span id="mail"> {{contact[1].mail}} </span>
-        </li>
+      </div>
 
-        <li>
-          <font-awesome-icon icon="fa-solid fa-location-dot" />
-          <span>{{contact[2].streetName}}, {{ contact[2].houseNumber }}</span>
-        </li>
+      <!-- Sezione trasporti -->
 
-      </ul>
+      <div id="transport">
+        <h2>Transport</h2>
 
-      <button type="button"> GET IN TOUCH</button>
+        <ul>
+          <li v-for="option in transport">
+            <font-awesome-icon icon="fa-solid fa-chevron-right" />
+            <a :href="option.linkSection"> {{ option.nameSection }}</a>
+          </li>
+        </ul>
+      </div>
 
-    </div>
+      <!-- Sezione supporto -->
 
-    <!-- Sezione informazioni azienda -->
+      <div id="support">
+        <h2>Support</h2>
 
-    <div id="about">
+        <ul>
+          <li v-for="option in support">
+            <font-awesome-icon icon="fa-solid fa-chevron-right" />
+            <a :href="option.linkSection">{{ option.nameSection }}</a>
+          </li>
+        </ul>
+      </div>
 
-      <h2>About</h2>
+    </section>
 
-      <ul>
-        <li v-for="option in about">
-          <font-awesome-icon icon="fa-solid fa-chevron-right" />
-          <a :href="option.linkSection">{{ option.nameSection }}</a>
-        </li>
-      </ul>
+    <!-- Sezione copyrights -->
 
-    </div>
+    <section id="copyrights">
+      <div>
+        <span>Enjoy the low price. We are tracking any intention of piracy</span>
+      </div>
 
-    <!-- Sezione trasporti -->
+      <div>
+        <font-awesome-icon icon="fa-regular fa-copyright" />
+        <span>2020 NEXGEN is Proudly Powered by <a href="#">Codings</a>.</span>
+      </div>
+    </section>
 
-    <div id="transport">
-      <h2>Transport</h2>
-
-      <ul>
-        <li v-for="option in transport">
-          <font-awesome-icon icon="fa-solid fa-chevron-right" />
-          <a :href="option.linkSection"> {{ option.nameSection }}</a>
-        </li>
-      </ul>
-    </div>
-
-    <!-- Sezione supporto -->
-
-    <div id="support">
-      <h2>Support</h2>
-
-      <ul>
-        <li v-for="option in support">
-          <font-awesome-icon icon="fa-solid fa-chevron-right" />
-          <a :href="option.linkSection">{{ option.nameSection }}</a>
-        </li>
-      </ul>
-    </div>
-
-  </section>
-
-  <!-- Sezione copyrights -->
-
-  <section id="copyrights">
-    <div>
-      <span>Enjoy the low price. We are tracking any intention of piracy</span>
-    </div>
-
-    <div>
-      <font-awesome-icon icon="fa-regular fa-copyright" />
-      <span>2020 NEXGEN is Proudly Powered by <a href="#">Codings</a>.</span>
-    </div>
-  </section>
-
-</footer>
-
+  </footer>
 </template>
 
 <style lang="scss" scoped>
-
 @use '../styles/partials/variables.scss' as *;
 
 // Regole footer
@@ -145,26 +142,31 @@ footer {
     margin: 0 auto;
     padding-top: 60px;
 
-    #contact, #about, #transport, #support {
+    #contact,
+    #about,
+    #transport,
+    #support {
       width: calc(100% / 4 - 15px);
     }
 
-    #about, #transport, #support {
+    #about,
+    #transport,
+    #support {
       border-radius: 10px;
       padding: 20px 50px;
       background-color: rgba(255, 255, 255, 0.2);
     }
 
     ul {
-        
-        li {
-          margin: 20px 0;
 
-          a {
-            padding: 10px;
-          }
+      li {
+        margin: 20px 0;
+
+        a {
+          padding: 10px;
         }
       }
+    }
 
     h2 {
       color: white;
@@ -174,6 +176,7 @@ footer {
 
     #contact {
       color: white;
+
       h2 {
         display: inline-block;
       }
@@ -230,5 +233,4 @@ footer {
     }
   }
 }
-
 </style>

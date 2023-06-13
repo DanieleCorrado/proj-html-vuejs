@@ -1,191 +1,267 @@
 <script>
 
 export default {
-    name: "PageMain",
+  name: "PageMain",
 }
 </script>
 
 <template>
+  <main>
 
-<main>
+    <!-- Sezione loistica -->
 
-  <!-- Sezione loistica -->
+    <section id="logistics">
 
-  <section id="logistics">
+      <!-- Sezione descrizione business -->
 
-    <!-- Sezione descrizione business -->
+      <div id="business-description">
 
-    <div id="business-description">
-      
-      <!-- Sezione descrizione generale -->
+        <!-- Sezione descrizione generale -->
 
-      <div id="general-description">
-        <h5>OUR BUSINESS AREAS</h5>
-        <h2>LOGISTIC SERVICES</h2>
-        <p>We are leaders in providing logistics services with a set of cutting edge technology and a team of experienced and renowned professionels.</p>
+        <div id="general-description">
+          <h5>OUR BUSINESS AREAS</h5>
+          <h2>LOGISTIC SERVICES</h2>
+          <p>We are leaders in providing logistics services with a set of cutting edge technology and a team of
+            experienced and renowned professionels.</p>
 
-        <div id="tags">
-          <button type="button">Tradition</button>
-          <button type="button">Quality</button>
-          <button type="button">Security</button>
+          <div id="tags">
+            <button type="button">Tradition</button>
+            <button type="button">Quality</button>
+            <button type="button">Security</button>
+          </div>
+
+          <button type="button">READ MORE</button>
         </div>
 
-        <button type="button">READ MORE</button>
+        <!-- Sezione descrizione tecnologie -->
+
+        <div id="technology-description">
+
+          <div class="explicative-image">
+            <img src="../assets/img/gallery-3.jpg" alt="Tecnology image">
+          </div>
+
+          <div class="description">
+
+            <h2>Technology</h2>
+
+            <p>Focused on developing technology solutions adapted to our client's needs.</p>
+
+          </div>
+
+        </div>
+
+        <!-- Sezione descrizione trasporto -->
+
+        <div id="transport-description">
+          <div class="explicative-image">
+            <img src="../assets/img/gallery-5.jpg" alt="Tecnology image">
+          </div>
+
+          <div class="description">
+
+            <h2>Technology</h2>
+
+            <p>Focused on developing technology solutions adapted to our client's needs.</p>
+
+          </div>
+        </div>
+
       </div>
 
-      <!-- Sezione descrizione tecnologie -->
+    </section>
 
-      <div id="technology-description">
+    <!-- Sezione about network -->
 
-        <div class="explicative-image">
-          <img src="../assets/img/gallery-3.jpg" alt="Tecnology image">
-        </div>
+    <section id="about-network">
 
-        <div class="description">
+      <div id="network-description">
 
-          <h2>Technology</h2>
+        <h5>ABOUT THE NETWORK</h5>
 
-          <p>Focused on developing technology solutions adapted to our client's needs.</p>
-
-        </div>
-
-      </div>
-
-      <!-- Sezione descrizione trasporto -->
-
-      <div id="transport-description">
-        <div class="explicative-image">
-          <img src="../assets/img/gallery-5.jpg" alt="Tecnology image">
-        </div>
-
-        <div class="description">
-
-          <h2>Technology</h2>
-
-          <p>Focused on developing technology solutions adapted to our client's needs.</p>
-
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Sezione about network -->
-
-  <section id="about-network">
-    
-    <div id="network-description">
-
-      <h5>ABOUT THE NETWORK</h5>
-
-      <div id="name">
-        <div id="background">
-        <h2>The</h2>
-        </div>
+        <div id="name">
+          <div id="background">
+            <h2>The</h2>
+          </div>
           <H2>Company</H2>
+        </div>
+
+        <!-- desrizione azienda -->
+
+        <p>With all of this expertise and capability comes an unrivalled commitment to customer service.</p>
+
+        <!-- Capacità aziendali -->
+
+        <ul>
+          <li>
+
+            <!-- Visualizzazione percentuale -->
+
+            <div class="radialProgressBar">
+              <div class="overlay"><span class="prc-number">0</span>%</div>
+            </div>
+
+            <div class="information">
+              <h2>Leadership</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+          </li>
+
+          <li>
+
+            <!-- Visualizzazione percentuale -->
+
+            <div class="radialProgressBar">
+              <div class="overlay"><span class="prc-number">0</span>%</div>
+            </div>
+
+            <div class="information">
+              <h2>Psychology</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+          </li>
+
+          <li>
+
+            <!-- Visualizzazione percentuale -->
+
+            <div class="radialProgressBar progress-1">
+              <div class="overlay"><span class="prc-number">1</span>%</div>
+            </div>
+
+            <div class="information">
+              <h2>Flexibility</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+          </li>
+
+        </ul>
+
       </div>
 
-      <!-- desrizione azienda -->
+    </section>
 
-      <p>With all of this expertise and capability comes an unrivalled commitment to customer service.</p>
+    <!-- Sezione applicativi -->
 
-      <!-- Capacità aziendali -->
+    <section id="application">
 
-      <ul>
-        <li>
+      <div class="app-logo">
+        <img src="../assets/img/logo-5.png" alt="Logo LESS">
+      </div>
 
-          <!-- Visualizzazione percentuale -->
-          
-          <div class="radialProgressBar">
-            <div class="overlay"><span class="prc-number">0</span>%</div>
+      <div class="app-logo">
+        <img src="../assets/img/logo-1.png" alt="Logo Woocommerce">
+      </div>
+
+      <div class="app-logo">
+        <img src="../assets/img/logo-2.png" alt="Logo Woocommerce">
+      </div>
+
+      <div class="app-logo">
+        <img src="../assets/img/logo-3.png" alt="Logo Woocommerce">
+      </div>
+
+      <div class="app-logo">
+        <img src="../assets/img/logo-4.png" alt="Logo Woocommerce">
+      </div>
+
+      <div class="app-logo">
+        <img src="../assets/img/logo-5.png" alt="Logo LESS">
+      </div>
+    </section>
+
+    <!-- Sezione news -->
+
+    <section id="news">
+
+      <div id="container">
+
+        <!-- Titolo sezione -->
+
+        <div id="title">
+
+          <h5>OUR EDITORAL CONTENT</h5>
+
+          <div id="name">
+            <H2>Latest</H2>
+            <div id="background">
+              <h2>News</h2>
+            </div>
           </div>
-          
-          <div class="information">
-            <h2>Leadership</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <!-- Descrizione sezione -->
+
+        <div id="description">
+
+          <p>Every week we publish content about what is best in the business world.</p>
+          <button type="button">SEE ALL</button>
+
+        </div>
+
+        <!-- Lista articoli -->
+
+        <div id="articles">
+
+          <!-- Articolo -->
+
+          <div class="article">
+
+            <div class="article-image">
+              <img src="../assets/img/news-1.jpg" alt="Immagine news">
+            </div>
+
+            <div class="news-title">
+              <h2>Increase creativity is possible for everyone</h2>
+            </div>
           </div>
 
-        </li>
+          <!-- Articolo -->
 
-        <li>
+          <div class="article">
+            <div class="article-image">
+              <img src="../assets/img/news-2.jpg" alt="Immagine news">
+            </div>
 
-          <!-- Visualizzazione percentuale -->
-
-          <div class="radialProgressBar">
-            <div class="overlay"><span class="prc-number">0</span>%</div>
-          </div>
-          
-          <div class="information">
-            <h2>Psychology</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="news-title">
+              <h2>Because market research is part of the business plan</h2>
+            </div>
           </div>
 
-        </li>
+          <!-- Articolo -->
 
-        <li>
+          <div class="article">
 
-          <!-- Visualizzazione percentuale -->
+            <div class="article-image">
+              <img src="../assets/img/news-3.jpg" alt="Immagine news">
+            </div>
 
-          <div class="radialProgressBar progress-1">
-            <div class="overlay"><span class="prc-number">1</span>%</div>
+            <div class="news-title">
+              <h2>Working from home is now a trend</h2>
+            </div>
+
           </div>
-          
-          <div class="information">
-            <h2>Flexibility</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
 
-        </li>
+        </div>
 
-      </ul>
+      </div>
 
-    </div>     
+    </section>
 
-  </section>
-
-  <!-- Sezione applicativi -->
-
-  <section id="application">
-
-    <div class="app-logo">
-      <img src="../assets/img/logo-5.png" alt="Logo LESS">
-    </div>
-
-    <div class="app-logo">
-      <img src="../assets/img/logo-1.png" alt="Logo Woocommerce">
-    </div>
-
-    <div class="app-logo">
-      <img src="../assets/img/logo-2.png" alt="Logo Woocommerce">
-    </div>
-
-    <div class="app-logo">
-      <img src="../assets/img/logo-3.png" alt="Logo Woocommerce">
-    </div>
-
-    <div class="app-logo">
-      <img src="../assets/img/logo-4.png" alt="Logo Woocommerce">
-    </div>
-
-    <div class="app-logo">
-      <img src="../assets/img/logo-5.png" alt="Logo LESS">
-    </div>
-  </section>
-
-
-</main>
-
+  </main>
 </template>
 
 <style lang="scss" scoped>
-
 @use '../styles/partials/variables.scss' as *;
 
 main {
   background-color: $mainbackground;
+
   // Regole sezione logistica
-  
+
   #logistics {
 
     // Regole sezione descrizione del business
@@ -197,7 +273,9 @@ main {
 
       // Regole comuni dei componenti della sezione
 
-      #general-description, #technology-description, #transport-description {
+      #general-description,
+      #technology-description,
+      #transport-description {
         margin: 60px 0;
         width: calc(100% / 3 - 20px);
         margin-right: 20px;
@@ -212,7 +290,10 @@ main {
 
         // Regole comuni dei componenti della sezione
 
-        h5, h2, p, #tags {
+        h5,
+        h2,
+        p,
+        #tags {
           margin-bottom: 30px;
         }
 
@@ -247,9 +328,10 @@ main {
 
       // Regole sezione descrizione teconologie e trasporto
 
-      #technology-description, #transport-description {
-        background-color: white; 
-        border-radius: 10px;      
+      #technology-description,
+      #transport-description {
+        background-color: white;
+        border-radius: 10px;
       }
     }
   }
@@ -273,7 +355,9 @@ main {
 
       // Regole comuni dei componenti della sezione
 
-      h5, #name, p {
+      h5,
+      #name,
+      p {
         margin-bottom: 30px;
       }
 
@@ -282,60 +366,61 @@ main {
       }
 
       #name {
+        display: flex;
+
+        #background {
+          display: inline-block;
+          background-color: rgba(4, 131, 131, 0.4);
+          padding: 0 5px;
+
+          h2 {
+            color: $primary;
+          }
+        }
+      }
+
+      ul {
+        li {
           display: flex;
+          align-items: center;
 
-          #background {
-            display: inline-block;
-            background-color: rgba(4, 131, 131, 0.4);
-            padding: 0 5px;
-
-            h2 {
-              color: $primary;
-            }
-          }
-        }
-
-        ul {
-          li {
+          // Regole cerchio percentuale
+          .radialProgressBar {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
             display: flex;
-            align-items: center;
-            
-            // Regole cerchio percentuale
-            .radialProgressBar {
-              border-radius: 50%;
-              width: 100px;
-              height: 100px;
-              display: flex;
-              background: rgb(35, 35, 40);
-              margin: 20px;
-            }
+            background: rgb(35, 35, 40);
+            margin: 20px;
+          }
 
-            .radialProgressBar .overlay {
-              border-radius: 50%;
-              width: 80px;
-              height: 80px;
-              margin: auto;
-              background: black;
-              text-align: center;
-              padding-top: 25%;
-            }
+          .radialProgressBar .overlay {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin: auto;
+            background: black;
+            text-align: center;
+            padding-top: 25%;
+          }
 
-            .overlay {
+          .overlay {
 
-              .prc-number {
-                font-size: 30px;
-              }
-            }
-            .progress-1 {
-              background-image: linear-gradient(0deg, #232328 50%, transparent 50%), linear-gradient(3.6deg, $primary 50%, #232328 50%);
-            }
-
-            // Regole informazioni
-            .information {
-              margin-top: 20px;
+            .prc-number {
+              font-size: 30px;
             }
           }
+
+          .progress-1 {
+            background-image: linear-gradient(0deg, #232328 50%, transparent 50%), linear-gradient(3.6deg, $primary 50%, #232328 50%);
+          }
+
+          // Regole informazioni
+          .information {
+            margin-top: 20px;
+          }
         }
+      }
 
     }
   }
@@ -357,6 +442,101 @@ main {
     }
   }
 
-}
+  // Regole sezione news
 
+  #news {
+    background-color: white;
+    padding: 70px 0;
+
+    // Regole container news
+
+    #container {
+      width: 80%;
+      margin: 0 auto;
+
+      // Regole comuni dei componenti della sezione
+
+      h5,
+      #name,
+      #description {
+        margin-bottom: 30px;
+      }
+
+      h5 {
+        color: $primary;
+      }
+
+      // Regole titolo sezione
+
+      #name {
+        display: flex;
+
+        h2 {
+          font-size: 40px;
+        }
+
+        #background {
+          display: inline-block;
+          background-color: rgba(4, 131, 131, 0.4);
+          margin-left: 5px;
+          padding: 0 10px;
+          border-radius: 5px;
+
+          h2 {
+            color: $primary;
+          }
+        }
+      }
+
+      // Regole pulsante
+
+      button {
+        padding: 10px 15px;
+      }
+
+      // Regole descrizione sezione
+
+      #description {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      // regole conteniotore articoli
+
+      #articles {
+        display: flex;
+        justify-content: space-between;
+
+        // Regole articoli
+        .article {
+          width: calc(100% / 3 - 20px);
+          position: relative;
+
+          // Regole immagini articoli
+          .article-image {
+
+            img {
+              width: 100%;
+              border-radius: 10px;
+              filter: brightness(0.5);
+            }
+
+          }
+
+          // Regole titoli articoli
+          .news-title {
+            width: 70%;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%);
+            color: white;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+}
 </style>
