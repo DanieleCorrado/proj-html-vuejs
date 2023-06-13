@@ -1,4 +1,5 @@
 <script>
+import contacts from '../dataset/contacts.json';
 
 export default {
     name: "PageHeader",
@@ -10,16 +11,7 @@ export default {
           openingtime : '09:00',
           closingTime : '18:00'
         },
-        contacts: [
-        {
-          stateCode: '1',
-          areaCode: '305',
-          phoneNumber: '12345678'
-        },
-        {
-          mail: 'hello@exemple.com'
-        }
-        ],
+        contact: contacts,
         menuOption: [
           {
             optionName: 'HOME',
@@ -71,15 +63,15 @@ export default {
         <!-- Telefono aziendale -->
 
        <font-awesome-icon icon="fa-solid fa-phone" />
-        <span id="phone"> +{{ contacts[0].stateCode }} 
-          <span v-if="contacts[0].areaCode">({{ contacts[0].areaCode }})</span>
-          {{ contacts[0].phoneNumber }}
+        <span id="phone"> +{{ contact[0].stateCode }} 
+          <span v-if="contact[0].areaCode">({{ contact[0].areaCode }})</span>
+          {{ contact[0].phoneNumber }}
         </span>
 
         <!-- Mail aziendale -->
 
         <font-awesome-icon icon="fa-solid fa-envelope" />
-        <span id="mail"> {{contacts[1].mail}} </span>
+        <span id="mail"> {{contact[1].mail}} </span>
 
       </div>
 
@@ -117,9 +109,13 @@ export default {
 
     <div id="top-jumbo">
 
-      <div id="logo">
-        <img src="../assets/img/image.png" alt="Logo">
+      <div id="name">
+        <div id="background">
+        <h2>NEX</h2>
       </div>
+        <H2>GEN</H2>
+      </div>
+      
       
       <div id="menu">
 
@@ -216,17 +212,6 @@ header {
     color: white;
     position: relative;
 
-    // Regole generali pulsanti
-
-    button {
-        padding: 5px 10px;
-        border-radius: 5px;
-        background-color: $buttombackground;
-        border: 1px solid $buttombackground;
-        color: white;
-        cursor: pointer;
-    }
-
     // Regole parte superiore del jumbotrone
 
     #top-jumbo {
@@ -237,10 +222,29 @@ header {
         justify-content: space-between;
         align-items: center;
 
+        #name {
+          display: flex;
+
+          #background {
+            display: inline-block;
+            background-color: rgba(4, 131, 131, 0.4);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding-left: 20px;
+
+            h2 {
+              color: $primary;
+            }
+          }
+        }
+
         #menu {
+
           #navigation {
+
           display: inline-block;
           padding: 0 10px;
+          
           ul {
             display: flex;
             list-style: none;
@@ -251,7 +255,7 @@ header {
               }
             }
           }
-        }
+          }
         }
     }
     // Regole call to action del jumbotrone

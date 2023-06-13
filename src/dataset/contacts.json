@@ -1,0 +1,14 @@
+[
+  {
+    "stateCode": "1",
+    "areaCode": "305",
+    "phoneNumber": "12345678"
+  },
+  {
+    "mail": "hello@exemple.com"
+  },
+  {
+    "streetName": "Main Avenue",
+    "houseNumber" :"987"
+  }
+]
