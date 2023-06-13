@@ -2,6 +2,28 @@
 
 export default {
   name: "PageMain",
+
+  data() {
+    return {
+      userName: '',
+      userEmail: '',
+      subscribers: []
+    }
+  },
+  methods: {
+    subscribe(e) {
+
+      e.preventDefault();
+      this.subscribers.push({
+        name: this.userName,
+        email: this.userEmail
+      })
+      this.userEmail = '';
+      this.userName = ''
+      console.log(this.subscribers)
+
+    }
+  },
 }
 </script>
 
@@ -251,6 +273,35 @@ export default {
 
     </section>
 
+    <!-- Sezione newsletter -->
+
+    <section id="newsletter">
+
+      <!-- Descrizione newsletter -->
+
+      <div id="newsletter-description">
+        <h5>NEWSLETTER</h5>
+        <div id="name">
+          <div id="background">
+            <h2>Know</h2>
+          </div>
+          <H2>First</H2>
+        </div>
+        <p>Follow closely and receive content about our company and the news of the current market.</p>
+      </div>
+
+      <!-- Form iscrizione newsletter -->
+
+      <div id="newsletter-form">
+        <form id="subscription" v-on:submit="subscribe">
+          <input type="text" id="name" placeholder="Name" v-model="userName">
+          <input type="email" id="name" placeholder="Email" v-model="userEmail">
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+      </div>
+
+    </section>
+
   </main>
 </template>
 
@@ -259,6 +310,22 @@ export default {
 
 main {
   background-color: $mainbackground;
+
+  // Regole background nome sezione
+
+  #name {
+    display: flex;
+
+    #background {
+      display: inline-block;
+      background-color: rgba(4, 131, 131, 0.4);
+      padding: 0 5px;
+
+      h2 {
+        color: $primary;
+      }
+    }
+  }
 
   // Regole sezione logistica
 
@@ -365,20 +432,6 @@ main {
         color: $primary;
       }
 
-      #name {
-        display: flex;
-
-        #background {
-          display: inline-block;
-          background-color: rgba(4, 131, 131, 0.4);
-          padding: 0 5px;
-
-          h2 {
-            color: $primary;
-          }
-        }
-      }
-
       ul {
         li {
           display: flex;
@@ -469,22 +522,8 @@ main {
       // Regole titolo sezione
 
       #name {
-        display: flex;
-
         h2 {
           font-size: 40px;
-        }
-
-        #background {
-          display: inline-block;
-          background-color: rgba(4, 131, 131, 0.4);
-          margin-left: 5px;
-          padding: 0 10px;
-          border-radius: 5px;
-
-          h2 {
-            color: $primary;
-          }
         }
       }
 
@@ -536,6 +575,64 @@ main {
         }
       }
     }
+  }
+
+  // Regole sezione newsletter
+
+  #newsletter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+    height: 400px;
+    background-image: url(../assets/img/bg-1.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+    // Regole comuni dei componenti della sezione
+
+    #newsletter-description,
+    #newsletter-form {
+      width: calc(100% / 4 - 100px);
+      margin-left: 100px;
+    }
+
+    // Regole descrizione newsletter
+
+    #newsletter-description {
+      text-align: justify;
+
+      h5,
+      #name,
+      p {
+        margin-bottom: 30px;
+      }
+
+      #name {
+        h2 {
+          margin-left: 10px;
+          font-size: 30px;
+        }
+      }
+    }
+
+    // Regole form newsletter
+
+    #newsletter-form {
+
+      #subscription {
+        input {
+          width: 300px;
+          padding: 10px;
+          filter: opacity(0.7);
+          margin-bottom: 20px;
+          border-radius: 5px;
+          border: none;
+        }
+      }
+    }
+
   }
 
 }
