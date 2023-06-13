@@ -109,7 +109,7 @@ export default {
   </section>
 
   <!-- Sezione copyrights -->
-  
+
   <section id="copyrights">
     <div>
       <span>Enjoy the low price. We are tracking any intention of piracy</span>
@@ -141,12 +141,12 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 30px;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
     padding-top: 60px;
 
     #contact, #about, #transport, #support {
-      width: calc(100% / 4 - 20px);
+      width: calc(100% / 4 - 15px);
     }
 
     #about, #transport, #support {
@@ -161,7 +161,7 @@ footer {
           margin: 20px 0;
 
           a {
-            margin-left: 10px;
+            padding: 10px;
           }
         }
       }
@@ -211,6 +211,8 @@ footer {
       }
     }
   }
+
+  // Regole sezione copyrights
 
   #copyrights {
     display: flex;

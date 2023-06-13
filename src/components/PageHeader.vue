@@ -129,6 +129,7 @@ export default {
         </nav>
 
         <button type="button"> GET IN TOUCH</button>
+        
       </div>
 
     </div>
