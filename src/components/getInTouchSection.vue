@@ -74,6 +74,7 @@ export default {
 
             <input type="tel" id="message-number" placeholder="Phone" v-model="store.userPhone" required>
             <select id="other-info" v-model="store.userOtherInfo">
+              <option value="" disabled selected hidden>Other options</option>
               <option value="altre">altre</option>
               <option value="opzioni">opzioni</option>
             </select>
