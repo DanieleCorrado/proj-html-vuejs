@@ -23,3 +23,31 @@ button {
   color: white;
   cursor: pointer;
 }
+
+  // Regole background nome sezione
+
+  #name {
+    display: flex;
+
+    #background {
+      display: inline-block;
+      background-color: rgba(4, 131, 131, 0.4);
+      padding: 0 5px;
+
+      h2 {
+        color: $primary;
+      }
+    }
+  }
+
+    // Regole input e select form
+
+    input,
+    select {
+      width: 300px;
+      padding: 10px;
+      filter: opacity(0.7);
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+    }
