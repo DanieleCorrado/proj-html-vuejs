@@ -1,13 +1,11 @@
 <script>
 
-import contacts from '../dataset/contacts.json';
 import logisticSection from './logisticSection.vue';
 import aboutnetwork from './aboutnetwork.vue';
 import applicationSection from './applicationSection.vue';
 import newsSection from './newsSection.vue';
 import newsletterSection from './newsletterSection.vue';
 import getInTouchSection from './getInTouchSection.vue';
-import store from '../dataset/store.json';
 
 export default {
   name: "PageMain",
@@ -33,11 +31,9 @@ export default {
 
     <aboutnetwork />
 
-
     <!-- Sezione applicativi -->
 
     <applicationSection />
-
 
     <!-- Sezione news -->
 

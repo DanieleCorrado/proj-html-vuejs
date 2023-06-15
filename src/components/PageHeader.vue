@@ -208,7 +208,7 @@ header {
     filter: brightness(.85);
     overflow: hidden;
     background-size: cover;
-    background-position: left;
+    background-position: bottom;
     color: white;
     position: relative;
 
